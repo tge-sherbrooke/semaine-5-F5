@@ -7,6 +7,21 @@
 
 ---
 
+> **Pratique autonome** -- Ce formatif est une evaluation formative (non notee). Contrairement au laboratoire guide, vous devez completer les taches de maniere autonome. Les tests automatiques vous donnent une retroaction immediate a chaque push.
+
+## Ce que vous avez appris en labo
+
+Le laboratoire de la semaine 5 vous a guide a travers :
+
+- Configuration d'un compte Adafruit IO et recuperation de la cle API
+- Publication de donnees de capteur vers Adafruit IO via MQTT
+- Organisation des donnees en feeds separes (temperature, humidite)
+- Implementation d'une reconnexion robuste avec backoff exponentiel
+
+Ce formatif vous demande d'appliquer ces competences de maniere autonome.
+
+---
+
 ## Progressive Milestones
 
 Ce formatif utilise des **jalons progressifs** avec retroaction detaillee:
@@ -75,7 +90,6 @@ Ce formatif vise a verifier que vous etes capable de:
 |  3. Creer les feeds sur Adafruit IO                         |
 |     +-- temperature (lowercase!)                            |
 |     +-- humidity                                            |
-|     +-- pressure                                            |
 |                                                             |
 |  4. Tester sur Raspberry Pi                                 |
 |     +-- export ADAFRUIT_IO_USERNAME='...'                   |
@@ -92,7 +106,10 @@ Ce formatif vise a verifier que vous etes capable de:
 ## Structure de code recommandee
 
 ```python
-#!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.9"
+# dependencies = ["adafruit-io"]
+# ///
 """Publication MQTT vers Adafruit IO avec reconnexion robuste."""
 
 import os
