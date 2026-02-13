@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # /// script
 # requires-python = ">=3.9"
 # dependencies = ["adafruit-io"]
@@ -93,8 +92,8 @@ def check_adafruit_io():
         return True
     except ImportError as e:
         fail(f"adafruit-io import failed: {e}")
-        print("\n  Install with:")
-        print("    pip install adafruit-io")
+        print("\n  Les dependances sont gerees automatiquement par uv run")
+        print("  via les metadonnees PEP 723 du script.")
         return False
 
 
