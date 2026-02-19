@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Milestone 2: MQTT Publishing (35 points)
 ========================================
@@ -122,7 +121,6 @@ def test_multiple_feeds():
     Suggestion: Publish each sensor value to its own feed:
         client.publish('temperature', temp)
         client.publish('humidity', humidity)
-        client.publish('pressure', pressure)
     """
     script_path = REPO_ROOT / "mqtt_publisher.py"
 
@@ -134,7 +132,6 @@ def test_multiple_feeds():
     feed_indicators = [
         "temperature" in content,
         "humidity" in content or "humidite" in content,
-        "pressure" in content or "pression" in content,
     ]
 
     feed_count = sum(feed_indicators)
@@ -148,7 +145,6 @@ def test_multiple_feeds():
             f"  # One feed per sensor value (Adafruit IO best practice)\n"
             f"  client.publish('temperature', temp)\n"
             f"  client.publish('humidity', humidity)\n"
-            f"  client.publish('pressure', pressure)\n"
         )
 
 

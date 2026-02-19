@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Milestone 3: Robust Connection (40 points)
 ==========================================
